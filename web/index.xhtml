@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
       xmlns:b="http://bootsfaces.net/ui"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
 <h:head>
    <title>Inicio</title>
 </h:head>
@@ -53,6 +54,34 @@
                   <b:message for="@previous"/>
                   <b:commandButton update="@form" value="Search" onclick="ajax:loginBean.login2()"/>
                </h:form>
+               <b:modal id="amodal" title="Modal Example" styleClass="modalPseudoClass">
+                  <h:form id="s">
+                     <h:outputLabel for="lastname" value="Lastname"/>
+                     <b:inputText id="lastname"/>
+                     <h:outputLabel for="firstname" value="Firstname"/>
+                     <b:inputText id="firstname"/>
+                     <h:outputLabel for="location" value="Location"/>
+                     <b:inputText id="location"/>
+                     <h:outputLabel for="passages" value="Passages Quantity"/>
+                     <b:inputText type="number" id="passages"/>
+                     <h:outputLabel for="cost" value="Cost"/>
+                     <b:inputText id="cost"/>
+                     <b:commandButton update="@form"  value="Buy" onclick="ajax:loginBean.login2()"/>
+                  </h:form>
+                  <f:facet name="footer">
+                     <b:button value="close" dismiss="modal" onclick="return false;"/>
+                     <b:button value="Buy" look="primary" dismiss="modal" onclick="return false;"/>
+                  </f:facet>
+               </b:modal>
+               <!--Modals Items-->
+               <b:row>
+                  <b:column span="3">
+                     <a id="atrigger"  href="#amodal" data-toggle="modal">
+                        <h:graphicImage url="http://www.charmcitycountdown.com/images/Buy-Tickets-Now.png" style="width: 255px;margin-left: 100%;margin-top: 35%;"/>
+                     </a>
+                  </b:column>
+               </b:row>
+               <!--FIN MODAL-->
             </div>
          </section>
       </b:container>
