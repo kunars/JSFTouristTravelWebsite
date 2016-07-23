@@ -18,15 +18,17 @@
       </b:navbarLinks>
    </b:navBar>
    <b:container>
-      <div class="col-md-8">
-         <b:row>
-            <b:image small-screen="one-third" value="../bootstrap/carousel/Valladolid-parque-1.jpg"  tooltip="small-screen='one-third'"/>
-            <b:image small-screen="one-third" value="../bootstrap/carousel/Valladolid-parque-2.jpg"  tooltip="small-screen='one-third'"/>
-            <b:image small-screen="one-third" hidden="tiny-screen"  value="../bootstrap/carousel/Valladolid-parque-3.jpg"
-                     tooltip="small-screen='one-third' hidden='tiny-screen'"/>
-         </b:row>
-      </div>
-
+      <b:carousel id="parque" style="width:100%">
+         <b:carouselItem>
+            <img src="../image/slide_1.jpg" alt="Valladolid" />
+         </b:carouselItem>
+         <b:carouselItem>
+            <img src="../image/slide_2.jpg" alt="Valladolid" />
+         </b:carouselItem>
+         <b:carouselItem>
+            <img src="../image/slide_3.jpg" alt="Valladolid" />
+         </b:carouselItem>
+      </b:carousel>
 
    </b:container>
 </h:body>
