@@ -14,6 +14,7 @@ import java.util.List;
 /**
  * Created by GrupoUTP on 09/07/2016.
  */
+
 @ManagedBean(name = "hrservicefacade",eager = true)
 @SessionScoped
 public class HRServiceFacade {
