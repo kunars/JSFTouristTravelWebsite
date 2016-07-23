@@ -8,86 +8,118 @@
       xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
 <h:head>
    <title>Inicio</title>
+   <link rel="stylesheet" href="css/styles.css"/>
 </h:head>
 <h:body>
    <header>
       <b:navBar brand="TouristTravel" brandHref="#">
-         <b:navbarLinks>
+         <b:navbarLinks id="menu-nav">
             <b:navLink value="Home" href="index.xhtml"></b:navLink>
             <b:navLink value="About Us" href="aboutUs.xhtml"></b:navLink>
             <b:navLink value="Travel" href="travel.xhtml"></b:navLink>
-            <b:navLink value="Contact Us" href="#"></b:navLink>
+            <b:navLink value="Contact Us" href="contactUs.xhtml"></b:navLink>
          </b:navbarLinks>
       </b:navBar>
    </header>
    <main>
       <b:container>
-         <b:carousel id="parque" style="width:100%">
-            <b:carouselItem>
-               <img src="image/slide_1.jpg" alt="Valladolid"/>
-            </b:carouselItem>
-            <b:carouselItem>
-               <img src="image/slide_2.jpg" alt="Valladolid"/>
-            </b:carouselItem>
-            <b:carouselItem>
-               <img src="image/slide_3.jpg" alt="Valladolid"/>
-            </b:carouselItem>
-         </b:carousel>
-         <section>
-            <div class="col-md-8">
-               <b:row>
-                  <b:image small-screen="one-third" value="image/preview_1.jpg"/>
-                  <b:image small-screen="one-third" value="image/preview_2.jpg"/>
-                  <b:image small-screen="one-third" value="image/preview_3.jpg"/>
-               </b:row>
-               <b:row>
-                  <b:image small-screen="one-third" value="image/preview_4.jpg"/>
-                  <b:image small-screen="one-third" value="image/preview_5.jpg"/>
-                  <b:image small-screen="one-third" value="image/preview_6.jpg"/>
-               </b:row>
-            </div>
-            <div class="col-md-4">
-               <h2>Search</h2>
-               <h:form id="search">
-                  <b:inputText id="namePlace" fieldId="namePlace" name="namePlace"
-                               label="Place" render-label="true"/>
-                  <b:message for="@previous"/>
-                  <b:commandButton update="@form" value="Search" onclick="ajax:loginBean.login2()"/>
-               </h:form>
-               <b:modal id="amodal" title="Modal Example" styleClass="modalPseudoClass">
-                  <h:form id="s">
-                     <h:outputLabel for="lastname" value="Lastname"/>
-                     <b:inputText id="lastname"/>
-                     <h:outputLabel for="firstname" value="Firstname"/>
-                     <b:inputText id="firstname"/>
-                     <h:outputLabel for="location" value="Location"/>
-                     <b:inputText id="location"/>
-                     <h:outputLabel for="passages" value="Passages Quantity"/>
-                     <b:inputText type="number" id="passages"/>
-                     <h:outputLabel for="cost" value="Cost"/>
-                     <b:inputText id="cost"/>
-                     <b:commandButton update="@form"  value="Buy" onclick="ajax:loginBean.login2()"/>
+         <b:row>
+            <b:column col-sm="12" col-md="12">
+               <b:carousel id="carousel">
+                  <b:carouselItem>
+                     <img src="image/slide_1.jpg" alt="Valladolid"/>
+                  </b:carouselItem>
+                  <b:carouselItem>
+                     <img src="image/slide_2.jpg" alt="Valladolid"/>
+                  </b:carouselItem>
+                  <b:carouselItem>
+                     <img src="image/slide_3.jpg" alt="Valladolid"/>
+                  </b:carouselItem>
+               </b:carousel>
+            </b:column>
+         </b:row>
+         <b:row>
+            <section id="containt-preview">
+               <div class="col-md-8">
+                  <b:row>
+                     <b:image small-screen="one-third" value="image/preview_1.jpg"/>
+                     <b:image small-screen="one-third" value="image/preview_2.jpg"/>
+                     <b:image small-screen="one-third" value="image/preview_3.jpg"/>
+                  </b:row>
+                  <b:row>
+                     <b:image small-screen="one-third" value="image/preview_4.jpg"/>
+                     <b:image small-screen="one-third" value="image/preview_5.jpg"/>
+                     <b:image small-screen="one-third" value="image/preview_6.jpg"/>
+                  </b:row>
+               </div>
+               <div class="col-md-4">
+                  <h2>Search</h2>
+                  <h:form id="search">
+                     <b:inputText id="namePlace" fieldId="namePlace" name="namePlace"
+                                  label="Place" render-label="true"/>
+                     <b:message for="@previous"/>
+                     <b:commandButton update="@form" value="Search" onclick="ajax:loginBean.login2()"/>
                   </h:form>
-                  <f:facet name="footer">
-                     <b:button value="close" dismiss="modal" onclick="return false;"/>
-                     <b:button value="Buy" look="primary" dismiss="modal" onclick="return false;"/>
-                  </f:facet>
-               </b:modal>
-               <!--Modals Items-->
-               <b:row>
-                  <b:column span="3">
-                     <a id="atrigger"  href="#amodal" data-toggle="modal">
-                        <h:graphicImage url="http://www.charmcitycountdown.com/images/Buy-Tickets-Now.png" style="width: 255px;margin-left: 100%;margin-top: 35%;"/>
-                     </a>
-                  </b:column>
-               </b:row>
-               <!--FIN MODAL-->
-            </div>
-         </section>
+                  <b:modal id="amodal" title="Modal Example" styleClass="modalPseudoClass">
+                     <h:form id="s">
+                        <h:outputLabel for="lastname" value="Lastname"/>
+                        <b:inputText id="lastname"/>
+                        <h:outputLabel for="firstname" value="Firstname"/>
+                        <b:inputText id="firstname"/>
+                        <h:outputLabel for="location" value="Location"/>
+                        <b:inputText id="location"/>
+                        <h:outputLabel for="passages" value="Passages Quantity"/>
+                        <b:inputText type="number" id="passages"/>
+                        <h:outputLabel for="cost" value="Cost"/>
+                        <b:inputText id="cost"/>
+                        <b:commandButton update="@form" value="Buy" onclick="ajax:loginBean.login2()"/>
+                     </h:form>
+                     <f:facet name="footer">
+                        <b:button value="close" dismiss="modal" onclick="return false;"/>
+                        <b:button value="Buy" look="primary" dismiss="modal" onclick="return false;"/>
+                     </f:facet>
+                  </b:modal>
+                  <!--Modals Items-->
+                  <b:row>
+                     <b:column span="3">
+                        <a id="atrigger" href="#amodal" data-toggle="modal">
+                           <h:graphicImage url="http://www.charmcitycountdown.com/images/Buy-Tickets-Now.png"
+                                           style="width: 255px;margin-left: 100%;margin-top: 35%;"/>
+                        </a>
+                     </b:column>
+                  </b:row>
+                  <!--FIN MODAL-->
+               </div>
+            </section>
+         </b:row>
       </b:container>
    </main>
    <footer>
-
+      <div id="footer_1">
+         <b:container>
+            <b:row>
+               <p>Lima, Perú Lun - Vie 9:30 a 18:00hrs</p>
+            </b:row>
+         </b:container>
+      </div>
+      <div id="footer_2">
+         <b:container>
+            <b:row>
+               <p>Siguenos en:</p>
+               <ul>
+                  <li><img src="image/Facebook-icon.png"/> Facebook</li>
+                  <li><img src="image/icon-twitter.png"/> Twiiter</li>
+               </ul>
+            </b:row>
+         </b:container>
+      </div>
+      <div id="footer_3">
+         <b:container>
+            <b:row>
+               <p>© Copyright 2015 Cuponatic.com Todos los derechos reservados.</p>
+            </b:row>
+         </b:container>
+      </div>
    </footer>
 </h:body>
 </html>

@@ -6,63 +6,97 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
     <title> Travel </title>
-
+    <link rel="stylesheet" href="css/styles.css"/>
 </h:head>
 <h:body>
-    <b:navBar brand="TouristTravel" brandHref="#">
-        <b:navbarLinks>
-        <b:navLink value="Home" href="#"></b:navLink>
-        <b:navLink value="About Us" href="aboutUs.xhtml"></b:navLink>
-        <b:navLink value="Travel" href="#"></b:navLink>
-        <b:navLink value="Contact Us" href="#"></b:navLink>
-        </b:navbarLinks>
-    </b:navBar>
-    <b:container>
-    <b:row>
-        <b:column span="8">
-            <b:column span="4">
-            <b:thumbnail>
-                <b:image value="image/location.jpg" alt="Location1" />
-                <f:facet name="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    <p>
-                        <b:navCommandLink look="primary" value="More Information" href="traveldetails.xhtml"/>
-                    </p>
-                </f:facet>
-            </b:thumbnail>
-            </b:column>
-            <b:column span="4">
-                <b:thumbnail>
-                    <img src="image/location.jpg" alt="Location1"/>
-                    <f:facet name="caption">
-                        <h3>Thumbnail label</h3>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p>
-                            <b:navCommandLink look="primary" value="More Information" href="traveldetails.xhtml"/>
-                        </p>
-                    </f:facet>
-                </b:thumbnail>
-            </b:column>
-        <b:column span="4">
-             <b:thumbnail>
-                 <img src="image/location.jpg" alt="Location1"/>
-                    <f:facet name="caption">
-                        <h3>Thumbnail label</h3>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p>
-                            <b:navCommandLink look="primary" value="More Information" href="traveldetails.xhtml"/>
-                        </p>
-                    </f:facet>
-                </b:thumbnail>
-            </b:column>
-        </b:column>
-        <b:column span="4">
-            <b:panel>
+    <header>
+        <b:navBar brand="TouristTravel" brandHref="#">
+            <b:navbarLinks id="menu-nav">
+                <b:navLink value="Home" href="index.xhtml"></b:navLink>
+                <b:navLink value="About Us" href="aboutUs.xhtml"></b:navLink>
+                <b:navLink value="Travel" href="travel.xhtml"></b:navLink>
+                <b:navLink value="Contact Us" href="contactUs.xhtml"></b:navLink>
+            </b:navbarLinks>
+        </b:navBar>
+    </header>
+    <main>
+        <b:container>
+            <b:row>
+                <b:column span="8">
+                    <b:column span="4">
+                        <b:thumbnail>
+                            <b:image value="image/location.jpg" alt="Location1"/>
+                            <f:facet name="caption">
+                                <h3>Thumbnail label</h3>
+                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                <p>
+                                    <b:navCommandLink look="primary" value="More Information"
+                                                      href="traveldetails.xhtml"/>
+                                </p>
+                            </f:facet>
+                        </b:thumbnail>
+                    </b:column>
+                    <b:column span="4">
+                        <b:thumbnail>
+                            <img src="image/location.jpg" alt="Location1"/>
+                            <f:facet name="caption">
+                                <h3>Thumbnail label</h3>
+                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                <p>
+                                    <b:navCommandLink look="primary" value="More Information"
+                                                      href="traveldetails.xhtml"/>
+                                </p>
+                            </f:facet>
+                        </b:thumbnail>
+                    </b:column>
+                    <b:column span="4">
+                        <b:thumbnail>
+                            <img src="image/location.jpg" alt="Location1"/>
+                            <f:facet name="caption">
+                                <h3>Thumbnail label</h3>
+                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                <p>
+                                    <b:navCommandLink look="primary" value="More Information"
+                                                      href="traveldetails.xhtml"/>
+                                </p>
+                            </f:facet>
+                        </b:thumbnail>
+                    </b:column>
+                </b:column>
+                <b:column span="4">
+                    <b:panel>
 
-            </b:panel>
-        </b:column>
-    </b:row>
-    </b:container>
+                    </b:panel>
+                </b:column>
+            </b:row>
+        </b:container>
+    </main>
+    <footer>
+        <div id="footer_1">
+            <b:container>
+                <b:row>
+                    <p>Lima, Perú Lun - Vie 9:30 a 18:00hrs</p>
+                </b:row>
+            </b:container>
+        </div>
+        <div id="footer_2">
+            <b:container>
+                <b:row>
+                    <p>Siguenos en:</p>
+                    <ul>
+                        <li><img src="image/Facebook-icon.png"/> Facebook</li>
+                        <li><img src="image/icon-twitter.png"/> Twiiter</li>
+                    </ul>
+                </b:row>
+            </b:container>
+        </div>
+        <div id="footer_3">
+            <b:container>
+                <b:row>
+                    <p>© Copyright 2015 Cuponatic.com Todos los derechos reservados.</p>
+                </b:row>
+            </b:container>
+        </div>
+    </footer>
 </h:body>
 </html>

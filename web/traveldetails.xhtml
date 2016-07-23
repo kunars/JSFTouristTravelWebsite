@@ -7,62 +7,95 @@
     <title>Travel Details</title>
 </h:head>
 <h:body>
-<b:navBar brand="TouristTravel" brandHref="#">
-    <b:navbarLinks>
-        <b:navLink value="Home" href="index.xhtml"></b:navLink>
-        <b:navLink value="About Us" href="traverl.xhtml"></b:navLink>
-        <b:navLink value="Travel" href="travel.xhtml"></b:navLink>
-        <b:navLink value="Contact Us" href="contactUs.xhtml"></b:navLink>
-    </b:navbarLinks>
-</b:navBar>
-<b:container>
-    <b:row>
-        <div class="col-md-9">
-            <h2>Our company</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere iusto laborum temporibus ullam
-                vero! Dolore ea odio quae quaerat quam quod repellat vel veniam. Doloribus hic laboriosam
-                molestiae necessitatibus sapiente!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aspernatur consequuntur, corporis
-                delectus, dolorem doloribus dolorum fugiat impedit mollitia placeat quibusdam quod reprehenderit
-                rerum sed temporibus vel voluptate voluptatem voluptatibus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut consectetur consequuntur
-                culpa, debitis dolorem doloribus eius expedita illum ipsum itaque, magni molestias perferendis,
-                provident quos ratione repudiandae vitae! Incidunt.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam aspernatur beatae
-                consequatur culpa eos esse est illo placeat praesentium quam qui reiciendis repellat
-                repellendus, similique sunt tenetur vero. Iste?</p>
-        </div>
-        <div class="col-md-3">
-            <figure>
-                <b:image value="image/location.jpg" style="max-width:100%;"/>
-            </figure>
-        </div>
-    </b:row>
-    <b:row>
-        <b:column span="7">
-        <b:panel>
-            <h2>Buy your ticket..! Now..</h2>
-            <h:form id="search">
-                <h:outputLabel for="lastname" value="Lastname"/>
-                <b:inputText id="lastname"/>
-                <h:outputLabel for="firstname" value="Firstname"/>
-                <b:inputText id="firstname"/>
-                <h:outputLabel for="location" value="Location"/>
-                <b:inputText id="location"/>
-                <h:outputLabel for="passages" value="Passages Quantity"/>
-                <b:inputText type="number" id="passages"/>
-                <h:outputLabel for="cost" value="Cost"/>
-                <b:inputText id="cost"/>
-                <b:commandButton update="@form"  value="Buy" onclick="ajax:loginBean.login2()"/>
-            </h:form>
-        </b:panel>
-        </b:column>
-            <b:column span="5">
-                <h:graphicImage url="http://2.bp.blogspot.com/-Ims8g0Eail8/UjnJ4W4_aXI/AAAAAAABJHM/MpzmLzKfz1k/s1600/Gifs+Animados+Turistas+14.gif" style="margin-top: 91px;
-    margin-left: 95px;"/>
-            </b:column>
+    <header>
+        <b:navBar brand="TouristTravel" brandHref="#">
+            <b:navbarLinks id="menu-nav">
+                <b:navLink value="Home" href="index.xhtml"></b:navLink>
+                <b:navLink value="About Us" href="aboutUs.xhtml"></b:navLink>
+                <b:navLink value="Travel" href="travel.xhtml"></b:navLink>
+                <b:navLink value="Contact Us" href="contactUs.xhtml"></b:navLink>
+            </b:navbarLinks>
+        </b:navBar>
+    </header>
+    <main>
+        <b:container>
+            <b:row>
+                <div class="col-md-9">
+                    <h2>Our company</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere iusto laborum temporibus ullam
+                        vero! Dolore ea odio quae quaerat quam quod repellat vel veniam. Doloribus hic laboriosam
+                        molestiae necessitatibus sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aspernatur consequuntur, corporis
+                        delectus, dolorem doloribus dolorum fugiat impedit mollitia placeat quibusdam quod reprehenderit
+                        rerum sed temporibus vel voluptate voluptatem voluptatibus!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut consectetur consequuntur
+                        culpa, debitis dolorem doloribus eius expedita illum ipsum itaque, magni molestias perferendis,
+                        provident quos ratione repudiandae vitae! Incidunt.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam aspernatur beatae
+                        consequatur culpa eos esse est illo placeat praesentium quam qui reiciendis repellat
+                        repellendus, similique sunt tenetur vero. Iste?</p>
+                </div>
+                <div class="col-md-3">
+                    <figure>
+                        <b:image value="image/location.jpg" style="max-width:100%;"/>
+                    </figure>
+                </div>
+            </b:row>
+            <b:row>
+                <b:column span="7">
+                    <b:panel>
+                        <h2>Buy your ticket..! Now..</h2>
+                        <h:form id="search">
+                            <h:outputLabel for="lastname" value="Lastname"/>
+                            <b:inputText id="lastname"/>
+                            <h:outputLabel for="firstname" value="Firstname"/>
+                            <b:inputText id="firstname"/>
+                            <h:outputLabel for="location" value="Location"/>
+                            <b:inputText id="location"/>
+                            <h:outputLabel for="passages" value="Passages Quantity"/>
+                            <b:inputText type="number" id="passages"/>
+                            <h:outputLabel for="cost" value="Cost"/>
+                            <b:inputText id="cost"/>
+                            <b:commandButton update="@form" value="Buy" onclick="ajax:loginBean.login2()"/>
+                        </h:form>
+                    </b:panel>
+                </b:column>
+                <b:column span="5">
+                    <h:graphicImage
+                            url="http://2.bp.blogspot.com/-Ims8g0Eail8/UjnJ4W4_aXI/AAAAAAABJHM/MpzmLzKfz1k/s1600/Gifs+Animados+Turistas+14.gif"
+                            style="margin-top: 91px;
+                    margin-left: 95px;"/>
+                </b:column>
 
-    </b:row>
-</b:container>
+            </b:row>
+        </b:container>
+    </main>
+    <footer>
+        <div id="footer_1">
+            <b:container>
+                <b:row>
+                    <p>Lima, Perú Lun - Vie 9:30 a 18:00hrs</p>
+                </b:row>
+            </b:container>
+        </div>
+        <div id="footer_2">
+            <b:container>
+                <b:row>
+                    <p>Siguenos en:</p>
+                    <ul>
+                        <li><img src="image/Facebook-icon.png"/> Facebook</li>
+                        <li><img src="image/icon-twitter.png"/> Twiiter</li>
+                    </ul>
+                </b:row>
+            </b:container>
+        </div>
+        <div id="footer_3">
+            <b:container>
+                <b:row>
+                    <p>© Copyright 2015 Cuponatic.com Todos los derechos reservados.</p>
+                </b:row>
+            </b:container>
+        </div>
+    </footer>
 </h:body>
 </html>
