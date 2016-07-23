@@ -8,26 +8,48 @@
     <title>Inicio</title>
 </h:head>
 <h:body>
-    <b:navBar brand="TouristTravel" brandHref="#">
-        <b:navbarLinks>
-            <b:navLink value="Home" href="index.xhtml"></b:navLink>
-            <b:navLink value="About Us" href="#"></b:navLink>
-            <b:navLink value="Travel" href="travel.xhtml"></b:navLink>
-            <b:navLink value="Contact Us" href="#"></b:navLink>
-        </b:navbarLinks>
-    </b:navBar>
-    <b:container>
-    <h2>Our company</h2>
-    <div class="col-md-9">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere iusto laborum temporibus ullam vero! Dolore ea odio quae quaerat quam quod repellat vel veniam. Doloribus hic laboriosam molestiae necessitatibus sapiente!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aspernatur consequuntur, corporis delectus, dolorem doloribus dolorum fugiat impedit mollitia placeat quibusdam quod reprehenderit rerum sed temporibus vel voluptate voluptatem voluptatibus!</p>
-    </div>
-    <div class="col-md-3">
-        <figure>
-            <b:image value="image/preview_4.jpg"/>
-        </figure>
-    </div>
-    </b:container>
+    <header>
+        <b:navBar brand="TouristTravel" brandHref="#">
+            <b:navbarLinks>
+                <b:navLink value="Home" href="#"></b:navLink>
+                <b:navLink value="About Us" href="#"></b:navLink>
+                <b:navLink value="Travel" href="#"></b:navLink>
+                <b:navLink value="Contact Us" href="#"></b:navLink>
+            </b:navbarLinks>
+        </b:navBar>
+    </header>
+    <main>
+        <b:container>
+            <b:row>
+                <div class="col-md-9">
+                    <h2>Our company</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere iusto laborum temporibus ullam
+                        vero! Dolore ea odio quae quaerat quam quod repellat vel veniam. Doloribus hic laboriosam
+                        molestiae necessitatibus sapiente!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aspernatur consequuntur, corporis
+                        delectus, dolorem doloribus dolorum fugiat impedit mollitia placeat quibusdam quod reprehenderit
+                        rerum sed temporibus vel voluptate voluptatem voluptatibus!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut consectetur consequuntur
+                        culpa, debitis dolorem doloribus eius expedita illum ipsum itaque, magni molestias perferendis,
+                        provident quos ratione repudiandae vitae! Incidunt.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam aspernatur beatae
+                        consequatur culpa eos esse est illo placeat praesentium quam qui reiciendis repellat
+                        repellendus, similique sunt tenetur vero. Iste?</p>
+                </div>
+                <div class="col-md-3">
+                    <figure>
+                        <b:image value="image/preview_4.jpg" style="max-width:100%;"/>
+                    </figure>
+                </div>
+            </b:row>
+            <b:row>
+                <b:image small-screen="one-third" value="image/preview_1.jpg"/>
+                <b:image small-screen="one-third" value="image/preview_2.jpg"/>
+                <b:image small-screen="one-third" value="image/preview_3.jpg"/>
+            </b:row>
+
+        </b:container>
+    </main>
     <footer>
 
     </footer>

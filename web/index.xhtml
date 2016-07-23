@@ -6,45 +6,59 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
    <title>Inicio</title>
-
 </h:head>
 <h:body>
-   <b:navBar brand="TouristTravel" brandHref="#">
-      <b:navbarLinks>
-         <b:navLink value="Home" href="#"></b:navLink>
-         <b:navLink value="About Us" href="aboutUs.xhtml"></b:navLink>
-         <b:navLink value="Travel" href="travel.xhtml"></b:navLink>
-         <b:navLink value="Contact Us" href="#"></b:navLink>
-      </b:navbarLinks>
-   </b:navBar>
-   <b:container>
-      <b:carousel id="parque" style="width:100%">
-         <b:carouselItem>
-            <img src="../image/slide_1.jpg" alt="Valladolid" />
-         </b:carouselItem>
-         <b:carouselItem>
-            <img src="../image/slide_2.jpg" alt="Valladolid" />
-         </b:carouselItem>
-         <b:carouselItem>
-            <img src="../image/slide_3.jpg" alt="Valladolid" />
-         </b:carouselItem>
-      </b:carousel>
+   <header>
+      <b:navBar brand="TouristTravel" brandHref="#">
+         <b:navbarLinks>
+            <b:navLink value="Home" href="index"></b:navLink>
+            <b:navLink value="About Us" href="aboutUs.xhtml"></b:navLink>
+            <b:navLink value="Travel" href="#"></b:navLink>
+            <b:navLink value="Contact Us" href="#"></b:navLink>
+         </b:navbarLinks>
+      </b:navBar>
+   </header>
+   <main>
+      <b:container>
+         <b:carousel id="parque" style="width:100%">
+            <b:carouselItem>
+               <img src="image/slide_1.jpg" alt="Valladolid"/>
+            </b:carouselItem>
+            <b:carouselItem>
+               <img src="image/slide_2.jpg" alt="Valladolid"/>
+            </b:carouselItem>
+            <b:carouselItem>
+               <img src="image/slide_3.jpg" alt="Valladolid"/>
+            </b:carouselItem>
+         </b:carousel>
+         <section>
+            <div class="col-md-8">
+               <b:row>
+                  <b:image small-screen="one-third" value="image/preview_1.jpg"/>
+                  <b:image small-screen="one-third" value="image/preview_2.jpg"/>
+                  <b:image small-screen="one-third" value="image/preview_3.jpg"/>
+               </b:row>
+               <b:row>
+                  <b:image small-screen="one-third" value="image/preview_4.jpg"/>
+                  <b:image small-screen="one-third" value="image/preview_5.jpg"/>
+                  <b:image small-screen="one-third" value="image/preview_6.jpg"/>
+               </b:row>
+            </div>
+            <div class="col-md-4">
+               <h2>Search</h2>
+               <h:form id="search">
+                  <b:inputText id="namePlace" fieldId="namePlace" name="namePlace"
+                               label="Place" render-label="true"/>
+                  <b:message for="@previous"/>
+                  <b:commandButton update="@form" value="Search" onclick="ajax:loginBean.login2()"/>
+               </h:form>
+            </div>
+         </section>
+      </b:container>
+   </main>
+   <footer>
 
-      <section>
-         <div class="col-md-8">
-            <b:row>
-               <b:image small-screen="one-third" value="../bootstrap/carousel/Valladolid-parque-1.jpg"
-                        tooltip="small-screen='one-third'"/>
-               <b:image small-screen="one-third" value="../bootstrap/carousel/Valladolid-parque-2.jpg"
-                        tooltip="small-screen='one-third'"/>
-               <b:image small-screen="one-third" hidden="tiny-screen"
-                        value="../bootstrap/carousel/Valladolid-parque-3.jpg"
-                        tooltip="small-screen='one-third' hidden='tiny-screen'"/>
-            </b:row>
-         </div>
-      </section>
-
-   </b:container>
+   </footer>
 </h:body>
 </html>
 
