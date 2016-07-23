@@ -20,6 +20,31 @@ img {
     margin-bottom: 30px;
 }
 
+#carousel {
+    border: solid 5px #e7e7e7;
+    box-shadow: 0px 3px 6px;
+}
+
+figure img {
+    border-radius: 30px;
+}
+
+.redondear {
+    margin-top: 15px;
+}
+
+.redondear figure img {
+    border-radius: 140px;
+    border: solid 3px #eeeeee;
+}
+
+.redondear figure, .redondear figure figcaption {
+    text-align: center;
+}
+
+.redondear figure figcaption p:first-child {
+    font-weight: bold;
+}
 footer {
     background-color: #3a4042;
     color: #fff;
