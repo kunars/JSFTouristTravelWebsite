@@ -36,9 +36,17 @@ public class HRServiceFacade {
         return employeesEntity;
     }
 
+    private CountriesEntity getCountriesEntity(){
+        CountriesEntity countriesEntity = new CountriesEntity();
+        countriesEntity.setConnection(connection);
+        return countriesEntity;
+    }
+
     public int getEmployeesCount() { return  getEmployeesEntity().getEmployees().size(); }
 
     public List<Employee> getEmployees(){return getEmployeesEntity().getEmployees();}
+
+    private List<Country> getCountries(){return  getCountriesEntity().getCountries();}
 
     public String getedit(){
         ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
