@@ -23,7 +23,7 @@ public class CountriesEntity {
     }
 
     public List<Country> getCountries(){
-        String sql = "SELECT * FROM countries";
+        String sql = "SELECT * FROM Countries";
         List<Country> countries = new ArrayList<>();
         if(connection == null) return null;
         try {

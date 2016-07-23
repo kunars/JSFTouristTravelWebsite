@@ -48,6 +48,7 @@
             </div>
             <div class="col-md-4">
                <h2>Search</h2>
+               <h:outputLabel value="#{hrservicefacade.countriesCount}"/>
                <h:form id="search">
                   <b:inputText id="namePlace" fieldId="namePlace" name="namePlace"
                                label="Place" render-label="true"/>
@@ -60,8 +61,10 @@
                      <b:inputText id="lastname"/>
                      <h:outputLabel for="firstname" value="Firstname"/>
                      <b:inputText id="firstname"/>
-                     <h:outputLabel for="location" value="Location"/>
-                     <b:selectOneMenu value="#{hrservicefacade.)}" id="location"></b:selectOneMenu>
+                     <h:outputLabel for="country" value="Location"/>
+                     <b:selectOneMenu value="#{hrservicefacade.countries}" id="country">
+                        <f:selectItems value="#{hrservicefacade.nameCountries}" />
+                     </b:selectOneMenu>
                      <h:outputLabel for="passages" value="Passages Quantity"/>
                      <b:inputText type="number" id="passages"/>
                      <h:outputLabel for="cost" value="Cost"/>

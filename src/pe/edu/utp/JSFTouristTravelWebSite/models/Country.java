@@ -1,8 +1,13 @@
 package pe.edu.utp.JSFTouristTravelWebSite.models;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
 /**
  * Created by GRLIMA on 23/07/2016.
  */
+@ManagedBean(name = "country")
+@SessionScoped
 public class Country {
     private String countryid;
     private String countryname;
