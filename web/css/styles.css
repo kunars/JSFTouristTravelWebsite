@@ -32,7 +32,6 @@ figure img {
 .redondear {
     margin-top: 15px;
 }
-
 .redondear figure img {
     border-radius: 140px;
     border: solid 3px #eeeeee;
@@ -71,12 +70,16 @@ footer div ul li {
     padding-top: 10px;
     text-align: center;
 }
+#presentacion figure{
+    text-align: center;
+}
 
 @media (min-width: 768px) {
     #menu-nav {
         float: right !important;
         margin: 0;
     }
+
 }
 
 @media (max-width: 768px) {
@@ -84,4 +87,5 @@ footer div ul li {
         float: left !important;
         margin: 0;
     }
+
 }
