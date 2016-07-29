@@ -11,7 +11,8 @@ import javax.faces.bean.SessionScoped;
 public class Country {
     private String countryid;
     private String countryname;
-    private int regionid;
+    private double countrycost;
+    private String regionid;
 
 
     public String getCountryid() {
@@ -30,11 +31,19 @@ public class Country {
         this.countryname = countryname;
     }
 
-    public int getRegionid() {
+    public double getCountrycost() {
+        return countrycost;
+    }
+
+    public void setCountrycost(double countrycost) {
+        this.countrycost = countrycost;
+    }
+
+    public String getRegionid() {
         return regionid;
     }
 
-    public void setRegionid(int regionid) {
+    public void setRegionid(String regionid) {
         this.regionid = regionid;
     }
 }

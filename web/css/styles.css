@@ -15,7 +15,14 @@ img {
 #containt-preview {
     margin-top: 30px;
 }
-
+#containt-preview table{
+    margin-left: -1%;
+}
+#containt-preview div tr{
+    float: left;
+    display: block;
+    margin-left: 1%;
+}
 #containt-preview div img {
     margin-bottom: 30px;
 }
@@ -79,6 +86,9 @@ footer div ul li {
         float: right !important;
         margin: 0;
     }
+    #containt-preview div tr {
+        width: 32.3333%;
+    }
 
 }
 
@@ -87,5 +97,7 @@ footer div ul li {
         float: left !important;
         margin: 0;
     }
-
+    #containt-preview div tr {
+        width: 49%;
+    }
 }

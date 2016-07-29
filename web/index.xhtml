@@ -41,16 +41,11 @@
          <b:row>
             <section id="containt-preview">
                <div class="col-md-8">
-                  <b:row>
-                     <b:image small-screen="one-third" value="image/preview_1.jpg"/>
-                     <b:image small-screen="one-third" value="image/preview_2.jpg"/>
-                     <b:image small-screen="one-third" value="image/preview_3.jpg"/>
-                  </b:row>
-                  <b:row>
-                     <b:image small-screen="one-third" value="image/preview_4.jpg"/>
-                     <b:image small-screen="one-third" value="image/preview_5.jpg"/>
-                     <b:image small-screen="one-third" value="image/preview_6.jpg"/>
-                  </b:row>
+                     <h:dataTable value="#{hrservicefacade.countries}" var="dos">
+                        <h:column >
+                              <img src="image/countries/#{dos.countryid}.jpg"/>
+                        </h:column>
+                     </h:dataTable>
                </div>
                <div class="col-md-4">
                   <h2>Search</h2>

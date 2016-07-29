@@ -33,8 +33,9 @@ public class CountriesEntity {
             while (rs.next()) {
                 Country country = new Country();
                 country.setCountryid(rs.getString("country_id"));
-                country.setRegionid(rs.getInt("region_id"));
                 country.setCountryname(rs.getString("country_name"));
+                country.setCountrycost(rs.getDouble("country_cost"));
+                country.setRegionid(rs.getString("region_id"));
                 countries.add(country);
             }
             ;
