@@ -66,10 +66,13 @@
                         <b:inputText id="lastname"/>
                         <h:outputLabel for="firstname" value="Firstname"/>
                         <b:inputText id="firstname"/>
-                        <h:outputLabel for="location" value="Location"/>
-                        <b:inputText id="location"/>
+                        <h:outputLabel for="country" value="Country"/>
+                        <b:selectOneMenu id="country"  >
+                           <f:selectItem itemLabel="--Seleccione--" itemValue=""/>
+                           <f:selectItems value="#{hrservicefacade.countries}"  var="country" itemValue="#{country.countryid}" itemLabel="#{country.countryname}"/>
+                        </b:selectOneMenu>
                         <h:outputLabel for="passages" value="Passages Quantity"/>
-                        <b:inputText type="number" id="passages"/>
+                        <b:inputText type="number" id="passages" maxlength="2" />
                         <h:outputLabel for="cost" value="Cost"/>
                         <b:inputText id="cost"/>
                         <b:commandButton update="@form" value="Buy" onclick="ajax:loginBean.login2()"/>

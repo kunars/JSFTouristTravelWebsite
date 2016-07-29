@@ -38,7 +38,7 @@
                     </b:column>
                     <b:column span="4">
                         <b:thumbnail>
-                            <img src="image/location.jpg" alt="Location1"/>
+                            <img src="image/preview_3.jpg" alt="Location1"/>
                             <f:facet name="caption">
                                 <h3>Thumbnail label</h3>
                                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -51,7 +51,7 @@
                     </b:column>
                     <b:column span="4">
                         <b:thumbnail>
-                            <img src="image/location.jpg" alt="Location1"/>
+                            <img src="image/preview_1.jpg" alt="Location1"/>
                             <f:facet name="caption">
                                 <h3>Thumbnail label</h3>
                                 <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -65,8 +65,62 @@
                 </b:column>
                 <b:column span="4">
                     <b:panel>
-
+                        <h2>Search Travel</h2>
+                        <h:form id="searchP">
+                            <h:outputLabel for="namecountry" value="Country"/>
+                            <b:inputText id="namecountry"/>
+                            <h:outputLabel for="date" value="Date"/>
+                            <b:inputText type="date" id="date"/>
+                            <h:outputLabel for="cost" value="Range of Cost"/>
+                            <b:inputText type="number" id="cost" placeholder="S/0.00"/>
+                            <b:commandButton update="" value="Search"/>
+                        </h:form>
                     </b:panel>
+                </b:column>
+            </b:row>
+            <b:row>
+                <b:column span="8">
+                    <b:column span="4">
+                        <b:thumbnail>
+                            <b:image value="image/preview_4.jpg" alt="Location1"/>
+                            <f:facet name="caption">
+                                <h3>Thumbnail label</h3>
+                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                <p>
+                                    <b:navCommandLink look="primary" value="More Information"
+                                                      href="traveldetails.xhtml"/>
+                                </p>
+                            </f:facet>
+                        </b:thumbnail>
+                    </b:column>
+                    <b:column span="4">
+                        <b:thumbnail>
+                            <img src="image/preview_5.jpg" alt="Location1"/>
+                            <f:facet name="caption">
+                                <h3>Thumbnail label</h3>
+                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                <p>
+                                    <b:navCommandLink look="primary" value="More Information"
+                                                      href="traveldetails.xhtml"/>
+                                </p>
+                            </f:facet>
+                        </b:thumbnail>
+                    </b:column>
+                    <b:column span="4">
+                        <b:thumbnail>
+                            <img src="image/preview_6.jpg" alt="Location1"/>
+                            <f:facet name="caption">
+                                <h3>Thumbnail label</h3>
+                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                                <p>
+                                    <b:navCommandLink look="primary" value="More Information"
+                                                      href="traveldetails.xhtml"/>
+                                </p>
+                            </f:facet>
+                        </b:thumbnail>
+                    </b:column>
+                </b:column>
+                <b:column span="4">
                 </b:column>
             </b:row>
         </b:container>
