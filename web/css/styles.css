@@ -15,10 +15,10 @@ img {
 #containt-preview {
     margin-top: 30px;
 }
-#containt-preview table{
+#containt-preview table, #main{
     margin-left: -1%;
 }
-#containt-preview div tr{
+#containt-preview div tr, #main tr{
     float: left;
     display: block;
     margin-left: 1%;
@@ -86,8 +86,8 @@ footer div ul li {
         float: right !important;
         margin: 0;
     }
-    #containt-preview div tr {
-        width: 32.3333%;
+    #containt-preview div tr, #main tr {
+        width: 32.3333% !important;
     }
 
 }
@@ -97,7 +97,7 @@ footer div ul li {
         float: left !important;
         margin: 0;
     }
-    #containt-preview div tr {
-        width: 49%;
+    #containt-preview div tr, #main tr {
+        width: 49% !important;
     }
 }
