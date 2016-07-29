@@ -47,7 +47,6 @@ public class HRServiceFacade {
     public List<Employee> getEmployees(){return getEmployeesEntity().getEmployees();}
 
     public List<Country> getCountries(){return getCountriesEntity().getCountries();}
-    public List<Country> getCountriesName(){return  getCountriesEntity().getCountriesName();}
 
     public String getedit(){
         ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
