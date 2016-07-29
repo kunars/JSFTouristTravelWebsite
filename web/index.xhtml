@@ -72,7 +72,7 @@
                            <f:selectItems value="#{hrservicefacade.countries}"  var="country" itemValue="#{country.countryid}" itemLabel="#{country.countryname}"/>
                         </b:selectOneMenu>
                         <h:outputLabel for="passages" value="Passages Quantity"/>
-                        <b:inputText type="number" id="passages" maxlength="2" />
+                        <b:inputText type="number" id="passages" />
                         <h:outputLabel for="cost" value="Cost"/>
                         <b:inputText id="cost"/>
                         <b:commandButton update="@form" value="Buy" onclick="ajax:loginBean.login2()"/>
