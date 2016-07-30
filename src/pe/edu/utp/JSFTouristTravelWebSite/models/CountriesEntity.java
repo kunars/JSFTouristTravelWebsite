@@ -22,6 +22,27 @@ public class CountriesEntity {
         this.connection = connection;
     }
 
+    public List<Country>  getCountryName(String name) {
+        String sql = "SELECT * FROM countries WHERE country_name='"+ name+"'";
+        List<Country> countries = new ArrayList<>();
+        if (connection == null) return null;
+        try {
+            Statement stmt = connection.createStatement();
+            ResultSet rs = stmt.executeQuery(sql);
+            if (rs == null) return null;
+            while (rs.next()) {
+                Country country = new Country();
+                country.setCountryid(rs.getString("country_id"));
+                country.setDescription(rs.getString("description"));
+                countries.add(country);
+            }
+            return countries;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     public List<Country> getCountries() {
         String sql = "SELECT * FROM countries";
         List<Country> countries = new ArrayList<>();
@@ -39,7 +60,6 @@ public class CountriesEntity {
                 country.setRegionid(rs.getString("region_id"));
                 countries.add(country);
             }
-            ;
             return countries;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -47,4 +67,4 @@ public class CountriesEntity {
         }
     }
 
-    }
+}

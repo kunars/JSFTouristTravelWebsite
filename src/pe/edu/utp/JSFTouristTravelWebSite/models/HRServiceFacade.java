@@ -48,12 +48,21 @@ public class HRServiceFacade {
 
     public List<Country> getCountries(){return getCountriesEntity().getCountries();}
 
+
     public String getedit(){
         ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
         String firstName = ec.getRequestParameterMap().get("form:firstn");
         String lastName = ec.getRequestParameterMap().get("form:lastn");
         int ide = Integer.parseInt(ec.getRequestParameterMap().get("form:id"));
         return getEmployeesEntity().geteditEmployee(firstName,lastName,ide);}
-}
+
+    public String getcountryname(){
+        ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
+        String countryname = ec.getRequestParameterMap().get("form:country");
+        getCountriesEntity().getCountryName(countryname);
+        return "traveldetails.xhtml?name='"+countryname+"'";}
+
+    }
+
 
 

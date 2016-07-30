@@ -41,49 +41,30 @@
          <b:row>
             <section id="containt-preview">
                <div class="col-md-8">
-                     <h:dataTable value="#{hrservicefacade.countries}" var="dos">
-                        <h:column >
-                              <img src="image/countries/#{dos.countryid}.jpg"/>
-                        </h:column>
-                     </h:dataTable>
+                  <div class="col-md-4">
+                     <b:image value="image/countries/BE.jpg"  tooltip="Belgium"/>
+                     <b:image  value="image/countries/MX.jpg"  tooltip="Mexico"/>
+                  </div>
+                  <div class="col-md-4">
+                     <b:image value="image/countries/US.jpg"  tooltip="United States"/>
+                     <b:image  value="image/countries/IT.jpg"  tooltip="Italy"/>
+                  </div>
+                  <div class="col-md-4">
+                     <b:image value="image/countries/JP.jpg"  tooltip="Japan"/>
+                     <b:image  value="image/countries/IN.jpg"  tooltip="India"/>
+                  </div>
                </div>
                <div class="col-md-4">
-                  <h2>Search</h2>
-                  <h:form id="search">
-                     <b:inputText id="namePlace" fieldId="namePlace" name="namePlace"
-                                  label="Place" render-label="true"/>
-                     <b:message for="@previous"/>
-                     <b:commandButton update="@form" value="Search" onclick="ajax:loginBean.login2()"/>
+                  <b:panel>
+                  <h2>Search Country</h2>
+                  <h:form name="form" id="form">
+                     <b:inputText id="country" name="country"  />
+                     <b:commandButton value="Search" action="#{hrservicefacade.getcountryname}"/>
                   </h:form>
-                  <b:modal id="amodal" title="Modal Example" styleClass="modalPseudoClass">
-                     <h:form id="s">
-                        <h:outputLabel for="lastname" value="Lastname"/>
-                        <b:inputText id="lastname"/>
-                        <h:outputLabel for="firstname" value="Firstname"/>
-                        <b:inputText id="firstname"/>
-                        <h:outputLabel for="country" value="Country"/>
-                        <b:selectOneMenu id="country"  >
-                           <f:selectItem itemLabel="--Seleccione--" itemValue=""/>
-                           <f:selectItems value="#{hrservicefacade.countries}"  var="country" itemValue="#{country.countryid}" itemLabel="#{country.countryname}"/>
-                        </b:selectOneMenu>
-                        <h:outputLabel for="passages" value="Passages Quantity"/>
-                        <b:inputText type="number" id="passages" />
-                        <h:outputLabel for="cost" value="Cost"/>
-                        <b:inputText id="cost"/>
-                        <b:commandButton update="@form" value="Buy" onclick="ajax:loginBean.login2()"/>
-                     </h:form>
-                     <f:facet name="footer">
-                        <b:button value="close" dismiss="modal" onclick="return false;"/>
-                        <b:button value="Buy" look="primary" dismiss="modal" onclick="return false;"/>
-                     </f:facet>
-                  </b:modal>
-                  <!--Modals Items-->
-
-                        <a id="atrigger" href="#amodal" data-toggle="modal">
-                           <h:graphicImage url="http://www.charmcitycountdown.com/images/Buy-Tickets-Now.png"/>
-                        </a>
-
-                  <!--FIN MODAL-->
+                     <a id="atrigger" href="#amodal" data-toggle="modal">
+                        <h:graphicImage url="http://www.brynteg.co.uk/wp-content/uploads/2016/02/tourist.png"/>
+                     </a>
+                  </b:panel>
                </div>
             </section>
          </b:row>
