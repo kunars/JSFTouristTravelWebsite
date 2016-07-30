@@ -43,7 +43,11 @@ figure img {
     border-radius: 140px;
     border: solid 3px #eeeeee;
 }
-
+#enlace a{
+    text-align: center !important;
+    display: block !important;
+    margin-top: 28px;
+}
 .redondear figure, .redondear figure figcaption {
     text-align: center;
 }
