@@ -68,10 +68,6 @@ public class HRServiceFacade {
     }
 
 
-    public void getcountryname(String namecountry) {
-
-
-    }
 
 }
 
