@@ -31,7 +31,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/BootsFaces-OSP-0.9.1-dist-default.jar!/" />
+          <root url="jar://$MODULE_DIR$/../BootsFaces-OSP-0.9.1-dist-default.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
