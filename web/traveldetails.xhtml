@@ -20,25 +20,19 @@
     </header>
     <main>
         <b:container>
+            <f:metadata>
+                <f:viewParam name="id" value="#{country.countryid}"/>
+                <f:viewParam name="name" value="#{country.countryname}"/>
+                <f:viewParam name="desc" value="#{country.description}"/>
+            </f:metadata>
             <b:row>
-                <h2 class="col-md-12">Our company</h2>
+                <h2 class="col-md-12">#{country.countryname}</h2>
                 <div class="col-md-9">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere iusto laborum temporibus ullam
-                        vero! Dolore ea odio quae quaerat quam quod repellat vel veniam. Doloribus hic laboriosam
-                        molestiae necessitatibus sapiente!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aspernatur consequuntur, corporis
-                        delectus, dolorem doloribus dolorum fugiat impedit mollitia placeat quibusdam quod reprehenderit
-                        rerum sed temporibus vel voluptate voluptatem voluptatibus!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut consectetur consequuntur
-                        culpa, debitis dolorem doloribus eius expedita illum ipsum itaque, magni molestias perferendis,
-                        provident quos ratione repudiandae vitae! Incidunt.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam aspernatur beatae
-                        consequatur culpa eos esse est illo placeat praesentium quam qui reiciendis repellat
-                        repellendus, similique sunt tenetur vero. Iste?</p>
+                    <p>#{country.description}</p>
                 </div>
                 <div class="col-md-3">
                     <figure>
-                        <b:image value="image/location.jpg" style="max-width:100%;"/>
+                        <b:image value="image/countries/#{country.countryid}.jpg" style="max-width:100%;"/>
                     </figure>
                 </div>
             </b:row>
@@ -87,7 +81,7 @@
                     <b:column span="6" id="enlace">
                         <h:link value="Term and Conditions" outcome="terminos-condiciones.xhtml" >
                         </h:link>
-                    </b:column>ss
+                    </b:column>
                     <b:column span="6">
                         <p>Follow us on:</p>
                         <ul>

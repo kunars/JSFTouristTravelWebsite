@@ -32,6 +32,8 @@
                                     <p>#{dos.description}</p>
                                     <h:link value="Detail" outcome="traveldetails.xhtml" includeViewParams="true">
                                         <f:param  name="id" value="#{dos.countryid}"/>
+                                        <f:param  name="name" value="#{dos.countryname}"/>
+                                        <f:param  name="desc" value="#{dos.description}"/>
                                     </h:link>
                                 </f:facet>
                             </b:thumbnail>
