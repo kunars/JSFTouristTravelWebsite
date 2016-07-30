@@ -24,7 +24,7 @@ public class HRServiceFacade {
     public HRServiceFacade(){
         try {
             InitialContext ctx = new InitialContext();
-            DataSource ds = (DataSource) ctx.lookup("jdbc/MySQLDataSource");
+            DataSource ds = (DataSource) ctx.lookup("jdbc/EmpsDataSource");
             connection = ds.getConnection();
         } catch (NamingException | SQLException e) {
             e.printStackTrace();
@@ -60,14 +60,14 @@ public class HRServiceFacade {
     public void getsearchcountry() {
         ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
         String countryname = ec.getRequestParameterMap().get("country");
+        List<Country> country = getCountriesEntity().getCountriesDetails(countryname);
         try {
-            FacesContext.getCurrentInstance().getExternalContext().redirect("traveldetails.xhtml?name="+countryname);
+            FacesContext.getCurrentInstance().getExternalContext().redirect("searchcountry.xhtml?name="+countryname);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-
-
+    public List<Country> getCountriesDetails(String name){return getCountriesEntity().getCountriesDetails(name);}
 }
 

@@ -20,10 +20,9 @@
     </header>
     <main>
         <b:container>
-            <h:dataTable value="#{hrservicefacade.getCountries}"/>
+            <h:dataTable value="#{hrservicefacade.getCountriesDetails(country.countryname)}"/>
             <f:metadata>
-                    <f:viewParam name="id" value="#{country.countryid}"/>
-                <f:viewParam name="name" value="#{country.countryname}"/>
+                <f:viewParam name="id" value="#{country.countryid}"/>
                 <f:viewParam name="desc" value="#{country.description}"/>
             </f:metadata>
             <b:row>
