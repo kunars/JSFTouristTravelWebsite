@@ -24,7 +24,7 @@ public class HRServiceFacade {
     public HRServiceFacade(){
         try {
             InitialContext ctx = new InitialContext();
-            DataSource ds = (DataSource) ctx.lookup("jdbc/EmpsDataSource");
+            DataSource ds = (DataSource) ctx.lookup("jdbc/MySQLDataSource");
             connection = ds.getConnection();
         } catch (NamingException | SQLException e) {
             e.printStackTrace();
