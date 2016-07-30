@@ -7,6 +7,7 @@ import javax.faces.context.FacesContext;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
@@ -56,13 +57,21 @@ public class HRServiceFacade {
         int ide = Integer.parseInt(ec.getRequestParameterMap().get("form:id"));
         return getEmployeesEntity().geteditEmployee(firstName,lastName,ide);}
 
-    public String getcountryname(){
+    public void getsearchcountry() {
         ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
-        String countryname = ec.getRequestParameterMap().get("form:country");
-        getCountriesEntity().getCountryName(countryname);
-        return "traveldetails.xhtml?name='"+countryname+"'";}
-
+        String countryname = ec.getRequestParameterMap().get("country");
+        try {
+            FacesContext.getCurrentInstance().getExternalContext().redirect("traveldetails.xhtml?name="+countryname);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 
+    public void getcountryname(String namecountry) {
+
+
+    }
+
+}
 
