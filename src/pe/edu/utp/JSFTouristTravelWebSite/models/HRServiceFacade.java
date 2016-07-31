@@ -31,12 +31,6 @@ public class HRServiceFacade {
         }
     }
 
-    private EmployeesEntity getEmployeesEntity(){
-        EmployeesEntity employeesEntity = new EmployeesEntity();
-        employeesEntity.setConnection(connection);
-        return employeesEntity;
-    }
-
     private CountriesEntity getCountriesEntity(){
         CountriesEntity countriesEntity = new CountriesEntity();
         countriesEntity.setConnection(connection);
@@ -48,10 +42,6 @@ public class HRServiceFacade {
         touristsEntity.setConnection(connection);
         return touristsEntity;
     }
-
-    public int getEmployeesCount() { return  getEmployeesEntity().getEmployees().size(); }
-
-    public List<Employee> getEmployees(){return getEmployeesEntity().getEmployees();}
 
     public List<Country> getCountries(){return getCountriesEntity().getCountries();}
 
