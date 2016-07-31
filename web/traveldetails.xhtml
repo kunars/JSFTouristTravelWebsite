@@ -20,7 +20,7 @@
     </header>
     <main>
         <b:container>
-            <h:dataTable value="#{hrservicefacade.getCountries}"/>
+            <h:dataTable value="#{hrservicefacade.countries}"/>
             <f:metadata>
                     <f:viewParam name="id" value="#{country.countryid}"/>
                 <f:viewParam name="name" value="#{country.countryname}"/>
@@ -42,17 +42,20 @@
                     <b:panel>
                         <h2>Buy your ticket..! Now..</h2>
                         <h:form id="search">
-                            <h:outputLabel for="lastname" value="Lastname"/>
-                            <b:inputText id="lastname"/>
-                            <h:outputLabel for="firstname" value="Firstname"/>
-                            <b:inputText id="firstname"/>
-                            <h:outputLabel for="location" value="Location"/>
-                            <b:inputText id="location"/>
+                            <h:outputLabel for="lastn" value="Lastname"/>
+                            <b:inputText id="lastn"/>
+                            <h:outputLabel for="firstn" value="Firstname"/>
+                            <b:inputText id="firstn"/>
+                            <h:outputLabel for="DNI" value="DNI"/>
+                            <b:inputText id="DNI" type="number"/>
+                            <h:outputLabel for="country" value="Country"/>
+                            <br/>
+                            <h2><h:outputLabel id="country" value="#{country.countryname}"/></h2>
                             <h:outputLabel for="passages" value="Passages Quantity"/>
                             <b:inputText type="number" id="passages"/>
-                            <h:outputLabel for="cost" value="Cost"/>
-                            <b:inputText id="cost"/>
-                            <b:commandButton update="@form" value="Buy" onclick="ajax:loginBean.login2()"/>
+                            <h:outputLabel for="cardnumber" value="Card Number"/>
+                            <b:inputText type="number" id="cardnumber"/>
+                            <b:commandButton update="@form" value="Buy" action="#{hrservicefacade.tourist}"/>
                         </h:form>
                     </b:panel>
                 </b:column>

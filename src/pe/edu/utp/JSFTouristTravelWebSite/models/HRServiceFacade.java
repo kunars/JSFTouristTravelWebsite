@@ -43,6 +43,12 @@ public class HRServiceFacade {
         return countriesEntity;
     }
 
+    private TouristsEntity getTouristsEntity(){
+        TouristsEntity touristsEntity = new TouristsEntity();
+        touristsEntity.setConnection(connection);
+        return touristsEntity;
+    }
+
     public int getEmployeesCount() { return  getEmployeesEntity().getEmployees().size(); }
 
     public List<Employee> getEmployees(){return getEmployeesEntity().getEmployees();}
@@ -50,24 +56,15 @@ public class HRServiceFacade {
     public List<Country> getCountries(){return getCountriesEntity().getCountries();}
 
 
-    public String getedit(){
+    public String getTourist(){
         ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
-        String firstName = ec.getRequestParameterMap().get("form:firstn");
-        String lastName = ec.getRequestParameterMap().get("form:lastn");
-        int ide = Integer.parseInt(ec.getRequestParameterMap().get("form:id"));
-        return getEmployeesEntity().geteditEmployee(firstName,lastName,ide);}
+        String firstName = ec.getRequestParameterMap().get("firstn");
+        String lastName = ec.getRequestParameterMap().get("lastn");
+        int DNI = Integer.parseInt(ec.getRequestParameterMap().get("DNI"));
+        String country = ec.getRequestParameterMap().get("country");
+        int passages = Integer.parseInt(ec.getRequestParameterMap().get("passages"));
+        int cardn = Integer.parseInt(ec.getRequestParameterMap().get("cardnumber"));
+        return getTouristsEntity().getIntoTourist(firstName,lastName,DNI,country,passages,cardn);}
 
-    public void getsearchcountry() {
-        ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
-        String countryname = ec.getRequestParameterMap().get("country");
-        List<Country> country = getCountriesEntity().getCountriesDetails(countryname);
-        try {
-            FacesContext.getCurrentInstance().getExternalContext().redirect("searchcountry.xhtml?name="+countryname);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public List<Country> getCountriesDetails(String name){return getCountriesEntity().getCountriesDetails(name);}
 }
 
