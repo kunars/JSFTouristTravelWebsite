@@ -43,19 +43,19 @@
                         <h2>Buy your ticket..! Now..</h2>
                         <h:form id="search">
                             <h:outputLabel for="lastn" value="Lastname"/>
-                            <b:inputText id="lastn"/>
+                            <b:inputText id="lastn" value="#{tourist.lastname}"/>
                             <h:outputLabel for="firstn" value="Firstname"/>
-                            <b:inputText id="firstn"/>
+                            <b:inputText id="firstn" value="#{tourist.firstname}"/>
                             <h:outputLabel for="DNI" value="DNI"/>
-                            <b:inputText id="DNI" type="number"/>
+                            <b:inputText id="DNI" type="number" value="#{tourist.DNI}"/>
                             <h:outputLabel for="country" value="Country"/>
                             <br/>
                             <h2><h:outputLabel id="country" value="#{country.countryname}"/></h2>
                             <h:outputLabel for="passages" value="Passages Quantity"/>
-                            <b:inputText type="number" id="passages"/>
+                            <b:inputText type="number" id="passages" value="#{tourist.passages}"/>
                             <h:outputLabel for="cardnumber" value="Card Number"/>
-                            <b:inputText type="number" id="cardnumber"/>
-                            <b:commandButton update="@form" value="Buy" action="#{hrservicefacade.tourist}"/>
+                            <b:inputText type="number" id="cardnumber" value="#{tourist.cardnumber}"/>
+                            <b:commandButton value="Buy" action="#{hrservicefacade.tourist}"/>
                         </h:form>
                     </b:panel>
                 </b:column>

@@ -22,7 +22,6 @@
     <main>
         <b:container>
             <b:row >
-                <b:column span="8">
                     <h:dataTable value="#{hrservicefacade.countries}" var="dos" id="main">
                         <h:column >
                             <b:thumbnail>
@@ -37,23 +36,8 @@
                                     </h:link>
                                 </f:facet>
                             </b:thumbnail>
-                        </h:column>s
+                        </h:column>
                     </h:dataTable>
-                </b:column>
-                <b:column span="4">
-                    <b:panel>
-                        <h2>Search Travel</h2>
-                        <h:form id="searchP">
-                            <h:outputLabel for="namecountry" value="Country"/>
-                            <b:inputText id="namecountry"/>
-                            <h:outputLabel for="date" value="Date"/>
-                            <b:inputText type="date" id="date"/>
-                            <h:outputLabel for="cost" value="Range of Cost"/>
-                            <b:inputText type="number" id="cost" placeholder="S/0.00"/>
-                            <b:commandButton update="" value="Search"/>
-                        </h:form>
-                    </b:panel>
-                </b:column>
             </b:row>
         </b:container>
     </main>

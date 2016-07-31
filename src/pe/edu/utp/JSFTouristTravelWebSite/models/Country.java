@@ -13,7 +13,6 @@ public class Country {
     private String countryname;
     private double countrycost;
     private String description;
-    private String regionid;
 
 
     public String getCountryid() {
@@ -48,11 +47,4 @@ public class Country {
         this.description = description;
     }
 
-    public String getRegionid() {
-        return regionid;
-    }
-
-    public void setRegionid(String regionid) {
-        this.regionid = regionid;
-    }
 }

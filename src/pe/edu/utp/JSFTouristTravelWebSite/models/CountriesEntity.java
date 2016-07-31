@@ -36,7 +36,6 @@ public class CountriesEntity {
                 country.setCountryname(rs.getString("country_name"));
                 country.setCountrycost(rs.getDouble("country_cost"));
                 country.setDescription(rs.getString("description"));
-                country.setRegionid(rs.getString("region_id"));
                 countries.add(country);
             }
             return countries;

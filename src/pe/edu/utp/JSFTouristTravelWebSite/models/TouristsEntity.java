@@ -22,7 +22,7 @@ public class TouristsEntity {
     }
 
     public String getIntoTourist(String lastname,String firstname,int DNI,String country,int passages,int cardnumber){
-        String sql = "INSERT INTO tourist VALUES ("+lastname+firstname+DNI+country+passages+cardnumber+")";
+        String sql = "INSERT INTO tourist VALUES ('d','das',123456789,'Mexico',23,32)";
         if(connection == null) return null;
         try {
             Statement stmt = connection.createStatement();

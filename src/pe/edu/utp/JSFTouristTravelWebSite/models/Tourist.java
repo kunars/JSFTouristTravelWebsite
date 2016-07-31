@@ -1,8 +1,13 @@
 package pe.edu.utp.JSFTouristTravelWebSite.models;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
 /**
  * Created by GrupoUTP on 30/07/2016.
  */
+@ManagedBean(name = "tourist")
+@SessionScoped
 public class Tourist {
     private String lastname;
     private String firstname;
